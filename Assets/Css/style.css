@@ -3,4 +3,18 @@ button,
     form,
     input {
       margin: 10px;
-    
+    }
+
+    #btnView{
+      background-color: aqua;
+    }
+
+aside{
+  float: right;
+  background-color: bisque;
+}
+
+#contentView{
+  background-color: burlywood;
+  height: 100px; width: 100px;
+}
