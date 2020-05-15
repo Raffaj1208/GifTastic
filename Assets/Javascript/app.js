@@ -1,3 +1,20 @@
+    //..
+    let btnArea = $("#btnView");
+    function addButton() {
+            let newButton = $("<button>");
+            newButton.addClass("animal");
+            newButton.attr("data-animal");
+            newButton.text();
+            $("#btnView").append(newButton)
+    }
+
+    $("#submit").on("click", function(event){
+        event.preventDefault();
+        let newAnimal = $("#input").val().trim();
+        btnArea.push(newAnimal);
+        addButton();
+    });
+
 //..
 $("button").on("click", function(){
 let animal = $(this).attr("data-animal");
@@ -23,6 +40,7 @@ $.ajax({
         animalDiv.append(animalImage);
         $("#contentView").prepend(animalDiv);
     }
+
 });
 
 });
