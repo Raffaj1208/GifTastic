@@ -3,7 +3,7 @@
     function addButton() {
             let newButton = $("<button>");
             newButton.addClass("animal");
-            newButton.attr("data-animal");
+            newButton.attr("data-animal", btnArea);
             newButton.text();
             $("#btnView").append(newButton)
     }
@@ -14,6 +14,7 @@
         btnArea.push(newAnimal);
         addButton();
     });
+    addButton();
 
 //..
 $("button").on("click", function(){

@@ -1,3 +1,7 @@
+body{
+  background-image: url(../Images/jungle.jpg)
+}
+
 button,
     div,
     form,
@@ -6,10 +10,34 @@ button,
     }
 
     #btnView{
-      background-color: aqua;
+      background-color: darkolivegreen;
+      border: greenyellow; border-radius: 15px;
+      border-style: dashed;
+      height: fit-content; width: fit-content;
+      
     }
 
 aside{
   float: right;
-  background-color: bisque;
+  color: aliceblue; font-size: large;
+  background-image: url(../Images/bark.jpg);
+  border-style: groove; border-color: yellowgreen;
+  border-radius: 10px;
+}
+
+button{
+  color: azure; background-color: darkgreen;
+  border: solid; border-color: yellowgreen; border-radius: 15px;
+}
+
+#submit{
+  background-color: darkgreen; border-radius: 15px;
+  border-style: solid; border-color: yellowgreen;
+  color: white;
+}
+
+#contentView{
+  height: fit-content; width: fit-content;
+  border: greenyellow; border-radius: 15px;
+  background-color: darkolivegreen; border-style: dotted;
 }
