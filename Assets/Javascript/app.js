@@ -1,4 +1,4 @@
-    //..
+//..
     let btnArea = $("#btnView");
     function addButton() {
             let newButton = $("<button>");
@@ -14,10 +14,10 @@
         btnArea.push(newAnimal);
         addButton();
     });
-    addButton();
 
 //..
 $("button").on("click", function(){
+    $("#contentView").empty();
 let animal = $(this).attr("data-animal");
 let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=zUw0bnZlqKeg8r03F07nOOSOcXkjgXnN&limit=5";
 
