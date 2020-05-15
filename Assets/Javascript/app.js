@@ -1,10 +1,11 @@
 //..
     let btnArea = $("#btnView");
     function addButton() {
+        $("#contentView").empty();
             let newButton = $("<button>");
             newButton.addClass("animal");
             newButton.attr("data-animal", btnArea);
-            newButton.text();
+            newButton.text($("#input").val());
             $("#btnView").append(newButton)
     }
 
