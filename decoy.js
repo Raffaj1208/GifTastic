@@ -1,17 +1,18 @@
 //..
-let newAnimals = ["Lion", "Tiger", "Gorilla", "Polar Bear"];
+let newAnimals = ["lion", "dog", "gorilla", "bear"];
+
 //..
 function addButton(){
     $("#btnView").empty();
-    $("#contentView").empty();
     for (let i = 0; i < newAnimals.length; i++){
         let a = $("<button>");
         a.addClass("animal");
-        a.attr("data-animal", newAnimals[i]);
+        a.attr("data-name", newAnimals[i]);
         a.text(newAnimals[i]);
         $("#btnView").append(a);
     }
 }
+
 //..
 $("#submit").on("click", function(event){
     event.preventDefault();
@@ -21,19 +22,18 @@ $("#submit").on("click", function(event){
 });
 //..
 addButton();
-
 //..
-function onClick(){
 $("#btnView").on("click", function(){
     $("#contentView").empty();
-
-let animal = $(this).data("data-animal");
+let animal = $(this).attr("data-animal");
 let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=zUw0bnZlqKeg8r03F07nOOSOcXkjgXnN&limit=5";
+
 //..
 $.ajax({
     url: queryURL,
     method: "GET"
 })
+
 //..
 .then(function(response){
     console.log(queryURL);
@@ -47,8 +47,12 @@ $.ajax({
         animalDiv.append(p);
         animalDiv.append(animalImage);
         $("#contentView").prepend(animalDiv);
-        }
-    });
-  });
+    }
+});
+
+});
+//..
+function clear(){
+$("#contentView").remove();
 }
-onClick();
+//.

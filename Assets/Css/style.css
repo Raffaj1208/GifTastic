@@ -1,6 +1,10 @@
 body{
   background-image: url(../Images/jungle.jpg)
 }
+header{
+  font-size: xx-large;
+  color: white;
+}
 
 button,
     div,
@@ -40,4 +44,5 @@ button{
   height: fit-content; width: fit-content;
   border: greenyellow; border-radius: 15px;
   background-color: darkolivegreen; border-style: dotted;
+  color: white;
 }
