@@ -1,23 +1,31 @@
 //..
-    let btnArea = $("#btnView");
-    function addButton() {
-        $("#contentView").empty();
-            let newButton = $("<button>");
-            newButton.addClass("animal");
-            newButton.attr("data-animal", btnArea);
-            newButton.text($("#input").val());
-            $("#btnView").append(newButton)
-    }
-
-    $("#submit").on("click", function(event){
-        event.preventDefault();
-        let newAnimal = $("#input").val().trim();
-        btnArea.push(newAnimal);
-        addButton();
-    });
+let newAnimals = ["Lion", "Tiger", "Gorilla", "Polar Bear"];
 
 //..
-$("button").on("click", function(){
+function addButton(){
+    $("#btnView").empty();
+    $("#contentView").empty();
+    for (let i = 0; i < newAnimals.length; i++){
+        let a = $("<button>");
+        a.addClass("animal");
+        a.attr("data-name", newAnimals[i]);
+        a.text(newAnimals[i]);
+        $("#btnView").append(a);
+    }
+}
+
+//..
+$("#submit").on("click", function(event){
+    event.preventDefault();
+    let newAnimal = $("#input").val().trim();
+    newAnimals.push(newAnimal);
+    addButton();
+});
+//..
+addButton();
+//..
+function onClick(){
+$("#btnView").on("click", function(){
     $("#contentView").empty();
 let animal = $(this).attr("data-animal");
 let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=zUw0bnZlqKeg8r03F07nOOSOcXkjgXnN&limit=5";
@@ -41,8 +49,12 @@ $.ajax({
         animalDiv.append(p);
         animalDiv.append(animalImage);
         $("#contentView").prepend(animalDiv);
-    }
-
-});
-
-});
+        }
+    });
+  });
+}
+onClick();
+//..
+function clear(){
+$("#contentView").empty();
+}
