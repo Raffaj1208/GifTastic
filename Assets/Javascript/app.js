@@ -12,7 +12,7 @@ function addButton() {
     a.text(newAnimals[i]);
     $("#btnView").append(a);
   }
-  onClick(); // added onClick, because you need to set the onClick handlers again after adding a new button
+  onClick(); // added onClick, because you need to set the onClick handlers again after adding a new button, or else the new buttons will no longer work
 }
 
 //..
@@ -28,6 +28,11 @@ addButton();
 function onClick() {
   $(".animal").on("click", function () { // changed from #btnView, because you want to do this when you click on the button, not the div
     $("#contentView").empty();
+    /*when line 29 was ('#btnView'), the 'this' object was not referring to the button, 
+    it was referring to the div element with #btnView as the id
+    and so $(this).attr('data-animal') does not exist on that element 
+    but now that line 29 is ('.animal'), the 'this' object reffers to the button,  
+    */
     let animal = $(this).attr("data-animal"); 
     console.log("Animal: ", this);
     let queryURL =
