@@ -1,7 +1,5 @@
 body{
   background-image: url(../Images/placeHolder.jpg);
-  background-position: cover;
-  background-repeat: none;
 }
 header{
   font-size: 60px;
@@ -9,28 +7,24 @@ header{
   text-align: center;
 }
 h1 {
-  text-align: center;
+  text-align: left;
   font-size: 35px;
   font-weight: normal;
 }
 
-button,
-    div,
-    form,
-    input {
-      margin: 5px;
-    }
+button, div, form, input {
+  margin: 2px;
+}
 
-    #btnView {
-      border-radius: 15px;
-      height: fit-content; width: fit-content;
-    }
+#btnView {
+  height: fit-content; width: fit-content;
+  border-radius: 15px;
+}
 
 aside {
-  margin: 5px;
+  margin: 2px;
   float: right;
   color: aliceblue; font-size: large;
-  border-radius: 10px;
 }
 
 button {
