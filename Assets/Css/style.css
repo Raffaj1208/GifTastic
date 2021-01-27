@@ -1,45 +1,53 @@
 body{
-  background-image: url(../Images/placeHolder.jpg)
+  background-image: url(../Images/placeHolder.jpg);
+  background-position: cover;
+  background-repeat: none;
 }
 header{
-  font-size: xx-large;
+  font-size: 60px;
   color: white;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: normal;
 }
 
 button,
     div,
     form,
     input {
-      margin: 10px;
+      margin: 5px;
     }
 
-    #btnView{
-      background-color: darkolivegreen;
-      border: greenyellow; border-radius: 15px;
-      border-style: dashed;
+    #btnView {
+      border-radius: 15px;
       height: fit-content; width: fit-content;
-      
     }
 
-aside{
+aside {
+  margin: 5px;
   float: right;
   color: aliceblue; font-size: large;
+  border-radius: 10px;
 }
 
-button{
-  color: azure; background-color: darkgreen;
-  border: solid; border-color: yellowgreen; border-radius: 15px;
+button {
+  background-image: url(../Images/placeHolder.jpg);
+  color: white; 
+  border: solid;
+  border-radius: 15px;
 }
 
 #submit{
-  background-color: darkgreen; border-radius: 15px;
-  border-style: solid; border-color: yellowgreen;
+  background-color: blue; border-radius: 15px;
+  border-style: solid; border-color: blue;
   color: white;
 }
 
 #contentView{
   height: fit-content; width: fit-content;
-  border: greenyellow; border-radius: 15px;
-  background-color: darkolivegreen; border-style: dotted;
   color: white;
+  clear: both;
 }
