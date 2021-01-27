@@ -1,5 +1,5 @@
 body{
-  background-image: url(../Images/jungle.jpg)
+  background-image: url(../Images/placeHolder.jpg)
 }
 header{
   font-size: xx-large;
@@ -24,9 +24,6 @@ button,
 aside{
   float: right;
   color: aliceblue; font-size: large;
-  background-image: url(../Images/bark.jpg);
-  border-style: groove; border-color: yellowgreen;
-  border-radius: 10px;
 }
 
 button{
